@@ -25,7 +25,7 @@
   font-size: 35px;
 }
 .sidebar.collapsed {
-  width: 50px; /* Keep a minimal width for toggle button */
+  width: 50px; 
   overflow: hidden;
 }
 
@@ -33,7 +33,7 @@
 .sidebar.collapsed .chat-items,
 .sidebar.collapsed .sources,
 .sidebar.collapsed .sources-container {
-  display: none; /* Hide content when collapsed */
+  display: none; 
 }
 
 .sidebar h1 {

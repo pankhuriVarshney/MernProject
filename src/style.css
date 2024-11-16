@@ -108,7 +108,7 @@
 }
 
 .feature-card {
-    background: #313131; /* Grey background */
+    background: #313131; 
     border: 1px solid #3b3b3b;
     border-radius: 8px;
     padding: 15px;
@@ -135,12 +135,12 @@
 
 /* Feature Card */
 .feature-card {
-    border: 2px solid #00ff00; /* Lighter grey border */
+    border: 2px solid #00ff00;
     border-radius: 10px;
     overflow: hidden;
     text-align: center;
     padding: 15px;
-    background-color: #000000; /* Light grey background */
+    background-color: #000000; 
     box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
 }
 .feature-section{
@@ -235,12 +235,12 @@
 
 /* Homepage */
 .homepage {
-    background-color: #000; /* Black background */
-    background-image: url('./assests/background.png'); /* Large background image */
+    background-color: #000; 
+    background-image: url('./assests/background.png'); 
     background-size: cover;
     background-position: center;
     min-height: 100vh;
-    color: #fff; /* White text by default */
+    color: #fff; 
 }
 
 .content-wrapper {
@@ -263,13 +263,13 @@
 .hero-title {
     font-size: 3rem;
     font-weight: bold;
-    color: #4caf50; /* Green title */
+    color: #4caf50; 
 }
 
 .hero-description {
     font-size: 1.2rem;
     margin-top: 10px;
-    color: #ccc; /* Light gray text */
+    color: #ccc; 
 }
 
 .cta-button {

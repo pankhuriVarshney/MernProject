@@ -7,10 +7,10 @@ import ChatbotInterface from './Components/ChatInterface.jsx';
 function App() {
   return (
     <Router>
-      <TopBar /> {/* Keep TopBar here */}
+      <TopBar /> 
       <Routes>
-        <Route path="/" element={<HomePage />} /> {/* HomePage Route */}
-        <Route path="/chatbot" element={<ChatbotInterface />} /> {/* Chatbot Route */}
+        <Route path="/" element={<HomePage />} /> 
+        <Route path="/chatbot" element={<ChatbotInterface />} /> 
       </Routes>
     </Router>
   );

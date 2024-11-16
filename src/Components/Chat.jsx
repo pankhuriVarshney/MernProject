@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import ChatItem from './ChatItem'; 
 import '../Chatbot.css';
 
 const Chat = () => {
@@ -8,7 +9,7 @@ const Chat = () => {
   const [userMessage, setUserMessage] = useState("");
 
   useEffect(() => {
-    // Start a new chat session when the component mounts
+
     axios.get("http://localhost:8000/api/start_chat")
       .then(response => setSessionId(response.data.sessionId))
       .catch(error => console.error("Error starting chat:", error));
@@ -17,7 +18,7 @@ const Chat = () => {
   const sendMessage = () => {
     if (!sessionId || !userMessage.trim()) return;
   
-    console.log("Sending message to the backend:", userMessage); // Log the message being sent
+    console.log("Sending message to the backend:", userMessage); 
   
     axios.post("http://localhost:8000/api/send_message", {
         sessionId,
@@ -25,23 +26,26 @@ const Chat = () => {
       })
       .then(response => {
         console.log("Received response:", response.data);
-        setChatHistory(response.data.chat_history); // Update chat history
-        setUserMessage(""); // Clear input after sending
+        setChatHistory([
+          ...chatHistory,
+          { sender: "User", message: userMessage },
+          { sender: "AI", message: response.data.reply }
+        ]); 
+        setUserMessage(""); 
       })
       .catch(error => {
         console.error("Error sending message:", error);
-        // Optionally, display error message to the user
+        
       });
-      
   };
-  
 
   return (
     <div className="chat-container">
       <div className="chat-history">
+        
         {chatHistory.map((msg, index) => (
           <div key={index} className={msg.sender === "AI" ? "ai-message" : "user-message"}>
-            <strong>{msg.sender}:</strong> {msg.message}
+            <ChatItem name={msg.sender} message={msg.message} />
           </div>
         ))}
       </div>

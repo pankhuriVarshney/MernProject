@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../style.css';
-import githubLogo from '../../assests/github.png';  // Import the image file
+import githubLogo from '../../assests/github.png';  
 
 
 function MediaLinks() {

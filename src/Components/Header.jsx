@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Header() {
+function Header(){
   return (
     <header className="header">
       <h1>Welcome to My App</h1>

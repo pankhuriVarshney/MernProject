@@ -2,7 +2,7 @@ import React from 'react';
 import FeatureSection from './FeatureSection.jsx';
 import ContactSection from './ContactSection.jsx';
 import MediaLinks from './MediaLinks.jsx';
-import '../../style.css'; // Import the new CSS file
+import '../../style.css'; 
 
 function HomePage() {
   return (

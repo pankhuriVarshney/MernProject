@@ -1,18 +1,14 @@
-import React, { useState } from 'react';
-import '../Chatbot.css';
-
 function ChatInput({ onSendMessage }) {
   const [message, setMessage] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (message.trim()) {
-      console.log("Sending message:", message); // Log the message
-      onSendMessage(message);
-      setMessage(''); // Clear the input after sending
+      console.log("Sending message:", message);
+      onSendMessage(message); 
+      setMessage('');
     }
   };
-  
 
   return (
     <div className="chat-input-container">
@@ -35,5 +31,3 @@ function ChatInput({ onSendMessage }) {
     </div>
   );
 }
-
-export default ChatInput;
